@@ -8,18 +8,18 @@ import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
-import logo from '../img/logo.png'
+import logo from '../img/logo.svg'
 import {Copyright} from "../components/Copyright";
+import {useHistory} from "react-router-dom";
+import {routes} from "../helpers/routes";
 
 export default function LoginPage() {
+    const hisotry = useHistory()
+
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
-        // eslint-disable-next-line no-console
-        console.log({
-            email: data.get('email'),
-            password: data.get('password'),
-        });
+        hisotry.push(routes.mainResident)
     };
 
     return (
@@ -63,11 +63,6 @@ export default function LoginPage() {
                         Sign In
                     </Button>
                     <Grid container>
-                        <Grid item xs>
-                            <Link href="#" variant="body2">
-                                Forgot password?
-                            </Link>
-                        </Grid>
                         <Grid item>
                             <Link href="#" variant="body2">
                                 {"Don't have an account? Sign Up"}
