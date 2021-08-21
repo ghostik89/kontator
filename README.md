@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+<p align="center">
+   <img src="logo-readme.png" alt="logo">
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<h4>Реализованная функциональность</h4>
+<ul>
+    <li>Функционал 1;</li>
+    <li>Функционал 2;</li>
+    <li>Функционал 3;</li>
+</ul> 
+<h4>Особенность проекта в следующем:</h4>
+<ul>
+ <li>Киллерфича-1;</li>
+ <li>Киллерфича-2;</li>
+ <li>Киллерфича-3;</li>  
+ </ul>
+<h4>Основной стек технологий:</h4>
+<ul>
+    <li>LAMP/LEMP/FAMP/FEMP.</li>
+	<li>HTML, CSS, JavaScript, TypeScript.</li>
+	<li>PHP 7, MySQL.</li>
+	<li>Symfony, Laravel, Zend Framework, Yii, Kohana.</li>
+	<li>LESS, SASS, PostCSS.</li>
+	<li>Gulp, Webpack, Babel.</li>
+	<li>БЭМ.</li>
+	<li>React (Next.js), Vue (Nuxt.js), Angular.</li>
+	<li>Git, Mercurial.</li>
+	<li>Jenkins, Gitlab.</li>
 
-In the project directory, you can run:
+ </ul>
+<h4>Демо</h4>
+<p>Демо сервиса доступно по адресу: http://demo.test </p>
+<p>Реквизиты тестового пользователя: email: <b>testuser@test.ru</b>, пароль: <b>testuser</b></p>
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+СРЕДА ЗАПУСКА
+------------
+1) развертывание сервиса производится на debian-like linux (debian 9+);
+2) требуется установленный web-сервер с поддержкой PHP(версия 7.4+) интерпретации (apache, nginx);
+3) требуется установленная СУБД MariaDB (версия 10+);
+4) требуется установленный пакет name1 для работы с...;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+УСТАНОВКА
+------------
+### Установка пакета name
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Выполните
+~~~
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install name1
+sudo apt-get install mariadb-client mariadb-server
+git clone https://github.com/Sinclear/default_readme
+cd default_readme
+...
+~~~
+### База данных
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Необходимо создать пустую базу данных, а подключение к базе прописать в конфигурационный файл сервиса по адресу: папка_сервиса/...
+~~~
+sudo systemctl restart mariadb
+sudo mysql_secure_installation
+mysql -u root -p
+mypassword
+CREATE DATABASE mynewdb;
+quit
+~~~
+### Выполнение миграций
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Для заполнения базы данных системной информацией выполните в корневой папке сервиса:
+~~~
+mysql -u root -p -f mynewdb < папка_сервиса/...
+mypassword
+~~~
+и согласитесь с запросом
 
-### `yarn eject`
+### Установка зависимостей проекта
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Установка зависимостей осуществляется с помощью [Composer](http://getcomposer.org/). Если у вас его нет вы можете установить его по инструкции
+на [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+После этого выполнить команду в директории проекта:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+~~~
+composer install
+~~~
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+РАЗРАБОТЧИКИ
 
-## Learn More
+<h4>Иванов Иван fullstack https://t.me/test@name1 </h4>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
