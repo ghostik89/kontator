@@ -8,22 +8,23 @@ import {LandingPage} from "./pages/LandingPage";
 import LoginPage from "./pages/LoginPage";
 import {routes} from "./helpers/routes";
 import RegisterPage from "./pages/RegisterPage";
+import {ResidentMainPage} from "./pages/ResidentPages/Main";
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route to={routes.landing}>
+        <Route path={routes.landing} exact>
           <LandingPage/>
         </Route>
-        <Route to={routes.login}>
+        <Route path={routes.login}>
           <LoginPage/>
         </Route>
-        <Route to={routes.login}>
-          <LoginPage/>
-        </Route>
-        <Route to={routes.register}>
+        <Route path={routes.register}>
           <RegisterPage/>
+        </Route>
+        <Route path={routes.mainResident}>
+          <ResidentMainPage />
         </Route>
       </Switch>
     </Router>
