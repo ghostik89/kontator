@@ -5,91 +5,74 @@
 
 <h4>Реализованная функциональность</h4>
 <ul>
-    <li>Функционал 1;</li>
-    <li>Функционал 2;</li>
-    <li>Функционал 3;</li>
+    <li>Получение всех мероприятий с сервера;</li>
+    <li>Визуализация основных страниц приложения;</li>
 </ul> 
 <h4>Особенность проекта в следующем:</h4>
 <ul>
- <li>Киллерфича-1;</li>
- <li>Киллерфича-2;</li>
- <li>Киллерфича-3;</li>  
+ <li>Инструмент мотивацией резидентов участвовать в развитии кластера, как творческого пространства, а также для объединения между собой;</li>
+ <li> Удобный интерфейс даже для обычных пользователей, которые могут просматривать и участвовать в мероприятиях кластера;</li>
  </ul>
 <h4>Основной стек технологий:</h4>
 <ul>
-    <li>LAMP/LEMP/FAMP/FEMP.</li>
 	<li>HTML, CSS, JavaScript, TypeScript.</li>
-	<li>PHP 7, MySQL.</li>
-	<li>Symfony, Laravel, Zend Framework, Yii, Kohana.</li>
-	<li>LESS, SASS, PostCSS.</li>
-	<li>Gulp, Webpack, Babel.</li>
+	<li>CSS in JS</li>
+	<li> Webpack, Babel.</li>
 	<li>БЭМ.</li>
 	<li>React (Next.js), Vue (Nuxt.js), Angular.</li>
 	<li>Git, Mercurial.</li>
-	<li>Jenkins, Gitlab.</li>
 
  </ul>
 <h4>Демо</h4>
-<p>Демо сервиса доступно по адресу: http://demo.test </p>
-<p>Реквизиты тестового пользователя: email: <b>testuser@test.ru</b>, пароль: <b>testuser</b></p>
+<p>Демо сервиса доступно по адресу: https://vigorous-kepler-558aac.netlify.app </p>
+<p>Реквизиты тестового пользователя: email: их нет(можно войти по кнопке, не заполняя логинформу)</b></p>
 
 
 
 
 СРЕДА ЗАПУСКА
 ------------
-1) развертывание сервиса производится на debian-like linux (debian 9+);
-2) требуется установленный web-сервер с поддержкой PHP(версия 7.4+) интерпретации (apache, nginx);
-3) требуется установленная СУБД MariaDB (версия 10+);
-4) требуется установленный пакет name1 для работы с...;
+1) развертывание сервиса производится на любой платформе, где установлен npm;
+2) требуется установленный web-сервер с поддержкой npm(последняя версия);
 
 
-УСТАНОВКА
+Развертывание React
 ------------
-### Установка пакета name
+### Для запуска дев версии приложения выполните
 
-Выполните
+Установите зависимости
 ~~~
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install name1
-sudo apt-get install mariadb-client mariadb-server
-git clone https://github.com/Sinclear/default_readme
-cd default_readme
-...
+npm i
 ~~~
-### База данных
 
-Необходимо создать пустую базу данных, а подключение к базе прописать в конфигурационный файл сервиса по адресу: папка_сервиса/...
+Разверните приложение зависимости
 ~~~
-sudo systemctl restart mariadb
-sudo mysql_secure_installation
-mysql -u root -p
-mypassword
-CREATE DATABASE mynewdb;
-quit
+npm run start
 ~~~
-### Выполнение миграций
 
-Для заполнения базы данных системной информацией выполните в корневой папке сервиса:
-~~~
-mysql -u root -p -f mynewdb < папка_сервиса/...
-mypassword
-~~~
-и согласитесь с запросом
 
-### Установка зависимостей проекта
+### Для запуска прод приложения выполните
 
-Установка зависимостей осуществляется с помощью [Composer](http://getcomposer.org/). Если у вас его нет вы можете установить его по инструкции
-на [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
-
-После этого выполнить команду в директории проекта:
-
+Установите зависимости
 ~~~
-composer install
+npm i
 ~~~
+
+Установите serve
+
+````
+npm install -g serve
+````
+
+Соберите приложение и поднимите его
+
+```
+npm run build
+serve -s build
+```
+
 
 РАЗРАБОТЧИКИ
 
-<h4>Иванов Иван fullstack https://t.me/test@name1 </h4>
+<h4>Тарапатина Екатерина Сергеевна fullstack https://vk.com/ekaterina028 </h4>
 
