@@ -14,7 +14,7 @@ import {
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-export const AdminMainPage = () => {
+export const RequestsPage = () => {
 
     const RequestsPaper = (props) => {
         return (

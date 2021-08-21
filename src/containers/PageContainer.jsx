@@ -100,7 +100,7 @@ export default function PageContainer({children}) {
     };
 
     return (
-        <Box sx={{ display: 'flex' }}>
+        <Box sx={{ display: 'flex', height: '100vh' }}>
             <CssBaseline />
             <AppBar position="fixed" open={open}>
                 <Toolbar>
@@ -150,7 +150,7 @@ export default function PageContainer({children}) {
                     </ListItem>
                 </List>
             </Drawer>
-            <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+            <Box component="main" sx={{ flexGrow: 1, p: 3, backgroundColor: '#f3f3f3', height: '100%' }}>
                 <DrawerHeader />
                 {children}
             </Box>
