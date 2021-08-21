@@ -2,7 +2,7 @@ import React from "react"
 import {Avatar, Typography} from "@material-ui/core";
 import NavBar from "../../components/ResidentPages/NavBar";
 
-export const ResidentDocumentsPage = () => {
+export const ResidentEventsPage = () => {
     return(
         <>
             <Avatar/>

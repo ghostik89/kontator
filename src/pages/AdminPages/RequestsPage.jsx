@@ -1,5 +1,5 @@
 import React from "react"
-import PageContainer from "../containers/PageContainer";
+import PageContainer from "../../containers/PageContainer";
 import {
     Accordion,
     AccordionDetails,
@@ -14,7 +14,7 @@ import {
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-export const RequestsPage = () => {
+export const RequestsPageAdmin = () => {
 
     const RequestsPaper = (props) => {
         return (

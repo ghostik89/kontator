@@ -11,6 +11,12 @@ import RegisterPage from "./pages/RegisterPage";
 import {ResidentMainPage} from "./pages/ResidentPages/Main";
 import { ThemeProvider } from '@material-ui/core/styles';
 import {theme} from "./helpers/customTheme";
+import {ResidentDocumentsPage} from "./pages/ResidentPages/Documtents";
+import {ResidentEventsPage} from "./pages/ResidentPages/Events";
+import {ResidentRatingPage} from "./pages/ResidentPages/Rating";
+import {MainPageAdmin} from "./pages/AdminPages/MainPage";
+import {StatisticAdminPage} from "./pages/AdminPages/StatisticPage";
+import {RequestsPageAdmin} from "./pages/AdminPages/RequestsPage";
 
 
 function App() {
@@ -29,6 +35,24 @@ function App() {
             </Route>
             <Route path={routes.mainResident}>
               <ResidentMainPage />
+            </Route>
+            <Route path={routes.docsResident}>
+              <ResidentDocumentsPage />
+            </Route>
+            <Route path={routes.eventsResident}>
+              <ResidentEventsPage />
+            </Route>
+            <Route path={routes.eventsResident}>
+              <ResidentRatingPage />
+            </Route>
+            <Route path={routes.mainAdmin}>
+              <MainPageAdmin />
+            </Route>
+            <Route path={routes.chartAdmin}>
+              <StatisticAdminPage />
+            </Route>
+            <Route path={routes.requestsAdmin}>
+              <RequestsPageAdmin />
             </Route>
           </Switch>
         </Router>

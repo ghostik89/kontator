@@ -6,10 +6,8 @@ import MuiAppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
@@ -18,7 +16,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import HomeIcon from '@material-ui/icons/Home';
 import AssignmentReturnedIcon from '@material-ui/icons/AssignmentReturned';
 import BarChartIcon from '@material-ui/icons/BarChart';
-import Button from "@material-ui/core/Button";
+import logo from "../img/logo-white.svg";
 
 const drawerWidth = 240;
 
@@ -56,6 +54,7 @@ const AppBar = styled(MuiAppBar, {
     shouldForwardProp: (prop) => prop !== 'open',
 })(({ theme, open }) => ({
     zIndex: theme.zIndex.drawer + 1,
+    background: 'linear-gradient(90deg, rgba(106,159,251,1) 61%, rgba(11,6,255,0.7413340336134453) 100%)',
     transition: theme.transitions.create(['width', 'margin'], {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
@@ -76,6 +75,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
         flexShrink: 0,
         whiteSpace: 'nowrap',
         boxSizing: 'border-box',
+        background: 'linear-gradient(90deg, rgba(106,159,251,1) 61%, rgba(11,6,255,0.7413340336134453) 100%)',
         ...(open && {
             ...openedMixin(theme),
             '& .MuiDrawer-paper': openedMixin(theme),
@@ -87,13 +87,13 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     }),
 );
 
+const StyledImg = styled('img')(() => ({
+    width: '30%'
+}));
+
 export default function PageContainer({children}) {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
-
-    const handleDrawerOpen = () => {
-        setOpen(true);
-    };
 
     const handleDrawerClose = () => {
         setOpen(false);
@@ -104,22 +104,7 @@ export default function PageContainer({children}) {
             <CssBaseline />
             <AppBar position="fixed" open={open}>
                 <Toolbar>
-                    <IconButton
-                        color="inherit"
-                        aria-label="open drawer"
-                        onClick={handleDrawerOpen}
-                        edge="start"
-                        sx={{
-                            marginRight: '36px',
-                            ...(open && { display: 'none' }),
-                        }}
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-                        KONTACTOR
-                    </Typography>
-                    <Button color="inherit">Войти</Button>
+                    <StyledImg src={logo} alt={logo}/>
                 </Toolbar>
             </AppBar>
             <Drawer variant="permanent" open={open}>

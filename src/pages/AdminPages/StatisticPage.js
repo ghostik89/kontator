@@ -1,9 +1,9 @@
 import React from "react"
-import PageContainer from "../containers/PageContainer";
+import PageContainer from "../../containers/PageContainer";
 import { Paper, Typography} from "@material-ui/core";
 import {Line} from 'react-chartjs-2';
 
-export const StatisticPage = () => {
+export const StatisticAdminPage = () => {
 
     const options = {
         responsive: true,

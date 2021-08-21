@@ -1,10 +1,10 @@
 import React from "react"
-import PageContainer from "../containers/PageContainer";
+import PageContainer from "../../containers/PageContainer";
 import {Avatar, Card, Grid, Typography} from "@material-ui/core";
 import Box from "@material-ui/core/Box";
 import EmojiEventsIcon from '@material-ui/icons/EmojiEvents';
 
-export const MainPage = () => {
+export const MainPageAdmin = () => {
 
     const Resident = (props) => {
         return (
