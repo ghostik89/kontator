@@ -8,8 +8,6 @@ import {routes} from "../../helpers/routes";
 import {Link} from "react-router-dom";
 
 export default function Header() {
-
-
     return (
         <Box sx={{ flexGrow: 1, mb: 2 }}>
             <AppBar position="static">
