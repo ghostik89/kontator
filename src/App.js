@@ -9,25 +9,30 @@ import LoginPage from "./pages/LoginPage";
 import {routes} from "./helpers/routes";
 import RegisterPage from "./pages/RegisterPage";
 import {ResidentMainPage} from "./pages/ResidentPages/Main";
+import { ThemeProvider } from '@material-ui/core/styles';
+import {theme} from "./helpers/customTheme";
+
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path={routes.landing} exact>
-          <LandingPage/>
-        </Route>
-        <Route path={routes.login}>
-          <LoginPage/>
-        </Route>
-        <Route path={routes.register}>
-          <RegisterPage/>
-        </Route>
-        <Route path={routes.mainResident}>
-          <ResidentMainPage />
-        </Route>
-      </Switch>
-    </Router>
+      <ThemeProvider theme={theme}>
+        <Router>
+          <Switch>
+            <Route path={routes.landing} exact>
+              <LandingPage/>
+            </Route>
+            <Route path={routes.login}>
+              <LoginPage/>
+            </Route>
+            <Route path={routes.register}>
+              <RegisterPage/>
+            </Route>
+            <Route path={routes.mainResident}>
+              <ResidentMainPage />
+            </Route>
+          </Switch>
+        </Router>
+      </ThemeProvider>
   );
 }
 
