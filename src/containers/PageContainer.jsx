@@ -17,6 +17,9 @@ import HomeIcon from '@material-ui/icons/Home';
 import AssignmentReturnedIcon from '@material-ui/icons/AssignmentReturned';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import logo from "../img/logo-white.svg";
+import {routes} from "../helpers/routes";
+import {useHistory} from "react-router-dom";
+import {ExitToApp} from "@material-ui/icons";
 
 const drawerWidth = 240;
 
@@ -88,12 +91,13 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 );
 
 const StyledImg = styled('img')(() => ({
-    width: '30%'
+    width: '20%'
 }));
 
 export default function PageContainer({children}) {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
+    const history = useHistory()
 
     const handleDrawerClose = () => {
         setOpen(false);
@@ -115,23 +119,28 @@ export default function PageContainer({children}) {
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    <ListItem button>
+                    <ListItem button onClick={() => history.push(routes.mainAdmin)}>
                         <ListItemIcon>
                             <HomeIcon />
                         </ListItemIcon>
                         <ListItemText primary={'Резиденты'} />
                     </ListItem>
-                    <ListItem button>
+                    <ListItem button onClick={() => history.push(routes.requestsAdmin)}>
                         <ListItemIcon>
                             <AssignmentReturnedIcon />
                         </ListItemIcon>
                         <ListItemText primary={'Заявки'} />
                     </ListItem>
-                    <ListItem button>
+                    <ListItem button onClick={() => history.push(routes.chartAdmin)}>
                         <ListItemIcon>
                             <BarChartIcon />
                         </ListItemIcon>
                         <ListItemText primary={'Статистика'} />
+                    </ListItem>
+                    <ListItem button onClick={() => history.push(routes.login)}>
+                        <ListItemIcon>
+                            <ExitToApp/>
+                        </ListItemIcon>
                     </ListItem>
                 </List>
             </Drawer>

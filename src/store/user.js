@@ -9,7 +9,8 @@ export const authorize = createAsyncThunk(
             const req = await axios.get('users/login', {
                 baseURL: 'https://www.visdom.tech/kontactor-dev-0.1/',
                 auth: {
-                    ...credentials
+                    username: credentials.email,
+                    password: credentials.password
                 },
             })
             return {

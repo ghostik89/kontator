@@ -27,31 +27,31 @@ function App() {
             <Route path={routes.landing} exact>
               <LandingPage/>
             </Route>
-            <Route path={routes.login}>
+            <Route path={routes.login} exact>
               <LoginPage/>
             </Route>
-            <Route path={routes.register}>
+            <Route path={routes.register} exact>
               <RegisterPage/>
             </Route>
-            <Route path={routes.mainResident}>
+            <Route path={routes.mainResident} exact>
               <ResidentMainPage />
             </Route>
-            <Route path={routes.docsResident}>
+            <Route path={routes.docsResident} exact>
               <ResidentDocumentsPage />
             </Route>
-            <Route path={routes.eventsResident}>
+            <Route path={routes.eventsResident} exact>
               <ResidentEventsPage />
             </Route>
-            <Route path={routes.eventsResident}>
+            <Route path={routes.ratingResident} exact>
               <ResidentRatingPage />
             </Route>
-            <Route path={routes.mainAdmin}>
+            <Route path={routes.mainAdmin} exact>
               <MainPageAdmin />
             </Route>
-            <Route path={routes.chartAdmin}>
+            <Route path={routes.chartAdmin} exact>
               <StatisticAdminPage />
             </Route>
-            <Route path={routes.requestsAdmin}>
+            <Route path={routes.requestsAdmin} exact>
               <RequestsPageAdmin />
             </Route>
           </Switch>

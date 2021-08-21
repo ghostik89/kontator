@@ -1,8 +1,8 @@
 import React from "react"
-import {Avatar, Grid, ListItem, ListItemAvatar, ListItemText, Paper} from "@material-ui/core";
+import {Avatar, Grid, ListItem, ListItemAvatar, ListItemText, Paper, Typography} from "@material-ui/core";
 import NavBar from "../../components/ResidentPages/NavBar";
 import List from "@material-ui/core/List";
-import {AccountBox, CardTravel, Home} from "@material-ui/icons";
+import {AccountBox, CardTravel, CheckCircle, Home} from "@material-ui/icons";
 
 export const ResidentMainPage = () => {
     return(
@@ -10,7 +10,7 @@ export const ResidentMainPage = () => {
             <Avatar/>
             <NavBar>
                 <>
-                    <Grid container spacing={2}>
+                    <Grid container spacing={10}>
                         <Grid item>
                             <Grid container spacing={2}>
                                 <Grid item>
@@ -45,8 +45,35 @@ export const ResidentMainPage = () => {
                             </Grid>
                         </Grid>
                         <Grid item>
-                            <Paper>
-                                Уведомление
+                            <Paper elevation={3} sx={{minWidth: 500, minHeight:100, padding: 2, mb:2}}>
+                                <Grid container spacing={2}>
+                                    <Grid item>
+                                        <Grid container spacing={2}>
+                                            <Grid item>
+                                                <CheckCircle/>
+                                            </Grid>
+                                            <Grid item>
+                                                <Typography variant={"h6"}>Ваш платеж принят</Typography>
+                                            </Grid>
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                                <Typography variant={"body2"}>Действие: оплата ЖКХ</Typography>
+                            </Paper>
+                            <Paper elevation={3} sx={{minWidth: 500, minHeight:100, padding: 2}}>
+                                <Grid container spacing={2}>
+                                    <Grid item>
+                                        <Grid container spacing={2}>
+                                            <Grid item>
+                                                <CheckCircle/>
+                                            </Grid>
+                                            <Grid item>
+                                                <Typography variant={"h6"}>Ваш платеж принят</Typography>
+                                            </Grid>
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                                <Typography variant={"body2"}>Действие: оплата ЖКХ</Typography>
                             </Paper>
                         </Grid>
                     </Grid>

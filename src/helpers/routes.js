@@ -5,7 +5,7 @@ export const routes = {
     mainResident: '/resident/home',
     docsResident: '/resident/docs',
     ratingResident: '/resident/rating',
-    eventsResident: 'resident/events',
+    eventsResident: '/resident/events',
     mainAdmin: '/admin/main',
     requestsAdmin: '/admin/requests',
     chartAdmin: '/admin/charts'

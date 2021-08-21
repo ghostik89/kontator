@@ -23,7 +23,7 @@ export const StatisticAdminPage = () => {
             '23.08.2021', '24.08.2021', '25.08.2021', '26.08.2021', '27.08.2021', '28.08.2021'],
         datasets: [
             {
-                label: 'Рога и копыта',
+                label: 'ООО "Cyber Tech"',
                 fill: false,
                 lineTension: 0.1,
                 backgroundColor: 'rgb(255,134,0)',
@@ -38,7 +38,7 @@ export const StatisticAdminPage = () => {
                 data: [55, 47, 77, 56, 36, 99, 55, 47, 77, 56, 36, 99]
             },
             {
-                label: 'Висдом лаб',
+                label: 'VLab',
                 fill: false,
                 lineTension: 0.1,
                 backgroundColor: 'rgb(0,159,255)',
@@ -53,7 +53,7 @@ export const StatisticAdminPage = () => {
                 data: [222, 235, 55, 224, 333, 22, 222, 235, 55, 224, 333]
             },
             {
-                label: 'Блаблабла',
+                label: 'Wonder club',
                 fill: false,
                 lineTension: 0.1,
                 backgroundColor: 'rgb(248,104,104)',

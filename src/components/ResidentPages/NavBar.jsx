@@ -12,10 +12,10 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import logo from '../../img/logo-white.svg'
+import {useHistory} from "react-router-dom";
+import {routes} from "../../helpers/routes";
+import {BarChart, Description, Event, ExitToApp, Home} from "@material-ui/icons";
 
 const drawerWidth = 240;
 
@@ -94,6 +94,7 @@ const StyledImg = styled('img')(() => ({
 export default function NavBar(props) {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
+    const history = useHistory()
 
     const handleDrawerClose = () => {
         setOpen(false);
@@ -115,15 +116,31 @@ export default function NavBar(props) {
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    {['Inbox', 'Starred', 'Send emaisl', 'Ssend email', 'Sdend email']
-                        .map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItem>
-                    ))}
+                    <ListItem button onClick={() => history.push(routes.mainResident)}>
+                        <ListItemIcon>
+                            <Home/>
+                        </ListItemIcon>
+                    </ListItem>
+                    <ListItem button onClick={() => history.push(routes.ratingResident)}>
+                        <ListItemIcon>
+                            <BarChart/>
+                        </ListItemIcon>
+                    </ListItem>
+                    <ListItem button onClick={() => history.push(routes.docsResident)}>
+                        <ListItemIcon>
+                            <Description/>
+                        </ListItemIcon>
+                    </ListItem>
+                    <ListItem button onClick={() => history.push(routes.eventsResident)}>
+                        <ListItemIcon>
+                            <Event/>
+                        </ListItemIcon>
+                    </ListItem>
+                    <ListItem button onClick={() => history.push(routes.login)}>
+                        <ListItemIcon>
+                            <ExitToApp/>
+                        </ListItemIcon>
+                    </ListItem>
                 </List>
             </Drawer>
             <Box component="main" sx={{ flexGrow: 1, p: 3 }}>

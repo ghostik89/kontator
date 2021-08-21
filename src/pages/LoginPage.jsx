@@ -9,13 +9,17 @@ import {Copyright} from "../components/Copyright";
 import {useHistory} from "react-router-dom";
 import {routes} from "../helpers/routes";
 import {useForm} from "react-hook-form";
+import {useDispatch} from "react-redux";
+import {TextField} from "@material-ui/core";
+import {authorize} from "../store/user";
 
 export default function LoginPage() {
     const history = useHistory()
-    const {handleSubmit} = useForm()
+    const {handleSubmit, register} = useForm()
+    const dispatch = useDispatch()
 
-    const onSubmit = handleSubmit(() => {
-        // dispatch(authorize(data))
+    const onSubmit = handleSubmit((data) => {
+        dispatch(authorize(data))
         history.push(routes.mainResident)
     })
 
@@ -32,28 +36,28 @@ export default function LoginPage() {
             >
                 <img src={logo} alt={'logo'}/>
                 <Box component="form" onSubmit={onSubmit} noValidate sx={{ mt: 1 }}>
-                    {/*<TextField*/}
-                    {/*    {...register('email', {required: false})}*/}
-                    {/*    margin="normal"*/}
-                    {/*    required*/}
-                    {/*    fullWidth*/}
-                    {/*    id="email"*/}
-                    {/*    label="Email"*/}
-                    {/*    name="email"*/}
-                    {/*    autoComplete="email"*/}
-                    {/*    autoFocus*/}
-                    {/*/>*/}
-                    {/*<TextField*/}
-                    {/*    {...register('password', {required: false})}*/}
-                    {/*    margin="normal"*/}
-                    {/*    required*/}
-                    {/*    fullWidth*/}
-                    {/*    name="password"*/}
-                    {/*    label="Пароль"*/}
-                    {/*    type="password"*/}
-                    {/*    id="password"*/}
-                    {/*    autoComplete="current-password"*/}
-                    {/*/>*/}
+                    <TextField
+                        {...register('email', {required: false})}
+                        margin="normal"
+                        required
+                        fullWidth
+                        id="email"
+                        label="Email"
+                        name="email"
+                        autoComplete="email"
+                        autoFocus
+                    />
+                    <TextField
+                        {...register('password', {required: false})}
+                        margin="normal"
+                        required
+                        fullWidth
+                        name="password"
+                        label="Пароль"
+                        type="password"
+                        id="password"
+                        autoComplete="current-password"
+                    />
                     <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
                         Войти как резидент
                     </Button>

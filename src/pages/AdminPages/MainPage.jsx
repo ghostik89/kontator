@@ -18,11 +18,11 @@ export const MainPageAdmin = () => {
                     <Grid container justifyContent={'space-between'}>
                         <Grid item>
                             <Typography variant={'h6'}>
-                                ООО "Рога и Копыта"
+                                ООО "Cyber Tech"
                             </Typography>
                         </Grid>
                         <Grid item sx={props.isPaid ? { color: 'green' } : { color: 'red' }}>
-                            Внимание! Не оплачены счета ЖКХ
+                            {props.isPaid? 'Все счета оплачены':'Внимание! Не оплачены счета ЖКХ'}
                         </Grid>
                     </Grid>
                     <Typography variant={'subtitle1'} color="text.secondary">
@@ -30,9 +30,7 @@ export const MainPageAdmin = () => {
                         Рейтинг: 155 место
                     </Typography>
                     <Typography sx={{ mt: 3 }}>
-                        Компания по производству говна и кривых приложений на реакте для хакатонов
-                        Компания по производству говна и кривых приложений на реакте для хакатонов
-                        Компания по производству говна и кривых приложений на реакте для хакатонов
+                        orem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum ornare purus, eget rutrum eros mollis et. Sed eget neque leo. Aliquam erat volutpat. Praesent fermentum accumsan dolor et cursus. Aenea
                     </Typography>
                 </Box>
             </Card>
