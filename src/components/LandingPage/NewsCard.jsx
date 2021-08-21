@@ -4,12 +4,15 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from "prop-types";
 
-export default function NewsCard({name, description}) {
+export default function NewsCard({name, description, time}) {
     return (
-        <Card sx={{ minWidth: 275 }}>
+        <Card sx={{ minWidth: 275, mb: 2 }}>
             <CardContent>
-                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                <Typography sx={{ fontSize: 20 }} gutterBottom>
                     {name}
+                </Typography>
+                <Typography color="text.secondary" gutterBottom>
+                    {time}
                 </Typography>
                 <Typography sx={{ mb: 1.5 }} color="text.secondary">
                     {description}
@@ -22,6 +25,6 @@ export default function NewsCard({name, description}) {
 NewsCard.propTypes = {
     name: PropTypes.string,
     description: PropTypes.string,
-    route: PropTypes.string
+    time: PropTypes.string
 };
 

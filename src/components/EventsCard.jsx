@@ -13,7 +13,7 @@ export default function EventsCard({name, description, route}) {
         <Card sx={{ maxWidth: 345 }}>
             <CardMedia
                 sx={{ height: 140 }}
-                image="/static/images/cards/contemplative-reptile.jpg"
+                image="https://picsum.photos/500"
                 title="Contemplative Reptile"
             />
             <CardContent>
@@ -25,7 +25,7 @@ export default function EventsCard({name, description, route}) {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Learn More</Button>
+                <Button size="small">Узнать больше</Button>
             </CardActions>
         </Card>
     );
