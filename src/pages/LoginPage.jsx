@@ -14,12 +14,11 @@ import {useHistory} from "react-router-dom";
 import {routes} from "../helpers/routes";
 
 export default function LoginPage() {
-    const hisotry = useHistory()
+    const history = useHistory()
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        hisotry.push(routes.mainResident)
+        history.push(routes.mainResident)
     };
 
     return (
